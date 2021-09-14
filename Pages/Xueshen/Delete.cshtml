@@ -1,0 +1,14 @@
+﻿@page
+@model WebApplication1.Pages.Xueshen.DeleteModel
+@{
+}
+<h1>确认删除</h1>
+<div class="alert alert-danger">
+    <h5>确删除学生-@Model.Student.Name 的信息吗</h5>
+    <form method="post">
+      <button type="submit" class="btn btn-danger">
+          确认
+      </button>
+        <a asp-page="/Xueshen/Index" class="btn btn-primary">取消</a>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+﻿@page
+@model WebApplication1.Pages.Xueshen.IndexModel
+@{
+    ViewData["Title"] = "学生列表";
+}
+<h1>学生列表</h1>
+<div class="card-deck">
+    @foreach (var student in Model.Students)
+    {
+    <ul>
+        <li>@student.Name</li>
+        <li>@student.Email</li>
+        <li><a asp-page="/Xueshen/Detail" asp-route-ID="@student.Id">详情</a></li>
+        <li><a asp-page="/Xueshen/Edit" asp-route-ID="@student.Id">更新</a></li>
+        <li><a asp-page="/Xueshen/Delete" asp-route-ID="@student.Id">删除</a></li>
+    </ul>
+    }
+</div>

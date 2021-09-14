@@ -1,0 +1,13 @@
+﻿@page
+@model WebApplication1.Pages.Xueshen.DetailModel
+@{
+}
+<h1>学生详情</h1>
+<ul>
+    <li>@Model.Student.Id</li>
+    <li>@Model.Student.Name</li>
+    <li>@Model.Student.Email</li>
+    <li>@Model.Student.Major</li>
+    <li>@Model.Student.PhoneNum</li>
+    <li> <a asp-page="/Xueshen/Index">返回</a></li>
+</ul>
